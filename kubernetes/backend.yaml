@@ -16,8 +16,16 @@ spec:
       labels:
         app: backend
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - controlplane
       containers:
-      nodeName: controlplane
         - name: backend
           image: zahidm9292y/wanderlust-backend-beta:12
           ports:
