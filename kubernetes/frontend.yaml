@@ -16,8 +16,16 @@ spec:
       labels:
         app: frontend
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - node-1
       containers:
-      nodeName: node-1
         - name: frontend
           image: zahidm9292y/wanderlust-frontend-beta:12
           ports:
