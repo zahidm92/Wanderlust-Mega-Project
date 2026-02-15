@@ -27,7 +27,7 @@ spec:
                 - controlplane
       containers:
         - name: frontend
-          image: zahidm9292y/wanderlust-frontend-beta:15
+          image: zahidm9292y/wanderlust-frontend-beta:16
           ports:
             - containerPort: 5173
 ---
