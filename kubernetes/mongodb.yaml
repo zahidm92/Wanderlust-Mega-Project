@@ -16,6 +16,15 @@ spec:
       labels:
         app: mongo
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - controlplane
       containers:
         - name: mongo
           image: mongo
