@@ -27,7 +27,7 @@ spec:
                 - controlplane
       containers:
         - name: backend
-          image: zahidm9292y/wanderlust-backend-beta:14
+          image: zahidm9292y/wanderlust-backend-beta:15
           ports:
             - containerPort: 8080
 ---
