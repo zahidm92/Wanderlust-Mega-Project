@@ -24,7 +24,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - node-1
+                - controlplane
       containers:
         - name: frontend
           image: zahidm9292y/wanderlust-frontend-beta:14
