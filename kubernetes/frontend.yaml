@@ -19,7 +19,7 @@ spec:
       containers:
       nodeName: node-1
         - name: frontend
-          image: zahidm9292y/wanderlust-frontend-beta:11
+          image: zahidm9292y/wanderlust-frontend-beta:12
           ports:
             - containerPort: 5173
 ---
