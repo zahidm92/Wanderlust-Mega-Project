@@ -30,6 +30,10 @@ spec:
           image: zahidm9292y/wanderlust-frontend-beta:16
           ports:
             - containerPort: 5173
+          env:
+            - name: VITE_API_PATH
+              value: ""
+
 ---
 apiVersion: v1
 kind: Service
